@@ -28,7 +28,7 @@ export async function startConversationMessage(
   );
   const embedding = await embeddingsCache.fetch(
     ctx,
-    `${player.name} is talking to ${otherPlayer.name}`,
+    `${player.name}正在和${otherPlayer.name}对话`,
   );
 
   const memories = await memory.searchMemories(

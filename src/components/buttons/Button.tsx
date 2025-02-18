@@ -1,32 +1,33 @@
 import clsx from 'clsx';
 import { MouseEventHandler, ReactNode } from 'react';
 
-export default function Button(props: {
-  className?: string;
+export default function Button({
+  children,
+  imgUrl,
+  href,
+  onClick,
+  title,
+  className = '',
+}: {
+  children: React.ReactNode;
+  imgUrl?: string;
   href?: string;
-  imgUrl: string;
-  onClick?: MouseEventHandler;
+  onClick?: () => void;
   title?: string;
-  children: ReactNode;
+  className?: string;
 }) {
   return (
     <a
       className={clsx(
-        'button text-white shadow-solid text-xl pointer-events-auto',
-        props.className,
+        'bg-brown-800 hover:bg-brown-700 text-white text-sm px-2 py-1 pointer-events-auto rounded',
+        className,
       )}
-      href={props.href}
-      title={props.title}
-      onClick={props.onClick}
+      href={href}
+      title={title}
+      onClick={onClick}
     >
-      <div className="inline-block bg-clay-700">
-        <span>
-          <div className="inline-flex h-full items-center gap-4">
-            <img className="w-4 h-4 sm:w-[30px] sm:h-[30px]" src={props.imgUrl} />
-            {props.children}
-          </div>
-        </span>
-      </div>
+      {imgUrl && <img src={imgUrl} className="w-4 h-4" alt="" />}
+      {children}
     </a>
   );
 }

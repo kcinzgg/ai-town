@@ -99,7 +99,7 @@ export function Messages({
         membershipNodes.push({
           node: (
             <div key={`joined-${playerId}`} className="leading-tight mb-6">
-              <p className="text-brown-700 text-center">{playerName} joined the conversation.</p>
+              <p className="text-brown-700 text-center">{playerName}加入了对话。</p>
             </div>
           ),
           time: started,
@@ -114,7 +114,7 @@ export function Messages({
       membershipNodes.push({
         node: (
           <div key={`joined-${playerId}`} className="leading-tight mb-6">
-            <p className="text-brown-700 text-center">{playerName} joined the conversation.</p>
+            <p className="text-brown-700 text-center">{playerName}加入了对话。</p>
           </div>
         ),
         time: started,

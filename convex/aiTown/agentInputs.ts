@@ -122,6 +122,8 @@ export const agentInputs = {
     },
     handler: (game, now, args) => {
       const description = Descriptions[args.descriptionIndex];
+      console.log('Creating agent with description:', description);
+      
       const playerId = Player.join(
         game,
         now,

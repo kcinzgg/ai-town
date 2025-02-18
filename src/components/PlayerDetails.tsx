@@ -56,7 +56,7 @@ export default function PlayerDetails({
   if (!playerId) {
     return (
       <div className="h-full text-xl flex text-center items-center p-4">
-        Click on an agent on the map to see chat history.
+        点击地图上的角色查看聊天记录
       </div>
     );
   }
@@ -246,7 +246,7 @@ export default function PlayerDetails({
       {!playerConversation && previousConversation && (
         <>
           <div className="box flex-grow">
-            <h2 className="bg-brown-700 text-lg text-center">Previous conversation</h2>
+            <h2 className="bg-brown-700 text-lg text-center">之前的对话</h2>
           </div>
           <Messages
             worldId={worldId}
